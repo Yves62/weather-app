@@ -1,0 +1,153 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    height: 100vh;
+    color : white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container{
+    width: 90%;
+    height: fit-content;
+    margin: 100px auto;
+    border: 1px solid white;
+    background: rgb(29,135,253);
+    background: linear-gradient(51deg, rgba(29,135,253,1) 0%, rgba(69,202,252,1) 100%);
+}
+
+#container .top{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#container  .localisation{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#container .localisation .right,
+#container  .localisation .left
+{
+    width: 50%;
+    height: 200px;
+}
+#container  .localisation .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container  .localisation .left .icon{
+    width: 100px;
+    height: 100px;
+}
+
+#container .localisation .right .content{
+    width: 70%;
+    margin: 20px 0px 0px 20px;
+    height: fit-content;
+    padding: 10px 10px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap :15px;
+}
+
+#container .hours{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(1,130px);
+    grid-template-areas: "one two three four five six seven";
+                        
+    border: 1px solid white;
+}
+
+.one{
+    grid-area: one;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+.two{
+    grid-area: two;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+.three{
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+.four{
+    grid-area: four;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+.five{
+    grid-area: five;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+.six{
+    grid-area: six;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+.seven{
+    grid-area: seven;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap :15px;
+    border: 1px solid white;
+}
+
+@media screen and (max-width : 1000px){
+    #container .hours{
+        display: block;
+    }
+    .one,.two,.three,.four,.five,.six,
+    .seven,.eight,.nine,.ten,.eleven,.twelve,.thirteen,.fourteen{
+        height: fit-content;
+        border: none;
+        padding: 20px 0px;
+        border-bottom: 1px solid white;
+    }
+}
